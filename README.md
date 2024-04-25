@@ -111,6 +111,12 @@ Tool for converting HTML/CSS documents to PDF:
 brew install weasyprint
 ```
 
+Other tools:
+```bash
+# Command-line JSON processor
+brew install jq
+```
+
 #### Office Tools
 
 [ONLYOFFICE](https://www.onlyoffice.com/) document management:
