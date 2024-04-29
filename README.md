@@ -76,9 +76,14 @@ conda init "$(basename "${SHELL}")"
 
 #### Developer Tools
 
-Command-line tools for managing AWS services and controlling Kubernetes clusters:
+CLI tools for managing AWS services and Oracle Cloud
 ```bash
-brew install awscli kubectl
+brew install awscli oci-cli
+```
+
+CLI tool controlling Kubernetes clusters:
+```bash
+brew install kubectl
 ```
 
 Tools specifically useful for DevOps roles:
