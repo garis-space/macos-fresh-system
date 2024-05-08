@@ -70,7 +70,7 @@ Install the necessary tools via Homebrew:
 
 [Conda](https://docs.anaconda.com/free/miniconda/index.html) is an open-source package management and environment management system for any language:
 ```bash
-brew install miniconda
+brew install --cask miniconda
 conda init "$(basename "${SHELL}")"
 ```
 
@@ -94,7 +94,7 @@ brew install hashicorp/tap/terraform
 brew install ansible ansible-lint
 ```
 
-PostgreSQL client library, necessary for Django projects connecting to PostgreSQL databases using psycopg2:
+PostgreSQL client library, necessary for Django projects connecting to PostgreSQL databases using psycopg:
 ```bash
 brew install libpq
 
@@ -116,6 +116,11 @@ Tool for converting HTML/CSS documents to PDF:
 brew install weasyprint
 ```
 
+Postman is an API platform for building and using APIs:
+```bash
+brew install --cask postman
+```
+
 Other tools:
 ```bash
 # Command-line JSON processor
@@ -126,7 +131,7 @@ brew install jq
 
 [ONLYOFFICE](https://www.onlyoffice.com/) document management:
 ```bash
-brew install onlyoffice
+brew install --cask onlyoffice
 ```
 
 #### To upgrade all installed packages to the latest:
