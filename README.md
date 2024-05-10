@@ -138,6 +138,7 @@ brew install --cask onlyoffice
 
 ```bash
 brew update
+
 brew upgrade
 ```
 
@@ -174,9 +175,10 @@ For container management, Docker is essential. After installing Docker, you shou
 ---
 ### 8. Set Up Your IDE
 
-Visual Studio Code is a lightweight but powerful source code editor. Install it along with some useful extensions:
-
-[Download Visual Studio Code](https://code.visualstudio.com/)
+[Visual Studio Code](https://code.visualstudio.com) is a lightweight but powerful source code editor. Install it along with some useful extensions:
+```bash
+brew install --cask visual-studio-code
+```
 
 
 ---
@@ -185,6 +187,10 @@ Visual Studio Code is a lightweight but powerful source code editor. Install it 
 For secure internet access and privacy:
 
 - [Tunnelblick](https://tunnelblick.net/): A free and open-source VPN client for macOS.
+```bash
+brew install --cask tunnelblick
+```
+
 - [ProtonVPN](https://protonvpn.com/): No logs, No ads, Unlimited & free forever
 
 
