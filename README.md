@@ -120,14 +120,18 @@ Tool for converting HTML/CSS documents to PDF:
 brew install weasyprint
 ```
 
-Postman is an API platform for building and using APIs:
+[Postman](https://www.postman.com) is an API platform for building and using APIs:
 ```bash
 brew install --cask postman
 ```
 
-Other tools:
+[Sourcetree](https://www.sourcetreeapp.com) beautiful Git GUI:
 ```bash
-# Command-line JSON processor
+brew install --cask sourcetree
+```
+
+Command-line JSON processor:
+```bash
 brew install jq
 ```
 
@@ -210,6 +214,7 @@ brew install --cask tunnelblick
 ### 11. Install Other Applications
 
 - [Forklift](https://binarynights.com/) - dual pane file manager and file transfer client
-- [Postman](https://www.postman.com/) - tool for building and using APIs
-- [Sourcetree](https://www.sourcetreeapp.com/) - beautiful Git GUI
 - [VLC Media Player](https://www.videolan.org/vlc/) - open source cross-platform multimedia player
+```bash
+brew install --cask vlc
+```
