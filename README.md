@@ -16,12 +16,16 @@ defaults write com.apple.finder AppleShowAllFiles true
 killall Finder
 ```
 
+
 ---
 ### 2. Install Homebrew
 
 Homebrew is a package manager for macOS. It simplifies the installation of software on the Mac operating system, and also installs the Xcode Command Line Tools if they are not already present.
 
 [Install Brew here](https://brew.sh/)
+
+Optionally, you can turn off sending anonymous analytics `brew analytics off`
+
 
 ---
 ### 3. Configure Your Terminal
