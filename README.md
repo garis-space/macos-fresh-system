@@ -102,7 +102,7 @@ PostgreSQL client library, necessary for Django projects connecting to PostgreSQ
 ```bash
 brew install libpq
 
-echo 'export PATH="/usr/local/opt/libpq/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.zshrc
 ```
 
 Tool for internationalizing applications:
