@@ -179,9 +179,10 @@ nvm install 'lts/*' --reinstall-packages-from=current
 ---
 ### 7. Install Docker
 
-For container management, Docker is essential. After installing Docker, you should adjust its settings for optimal performance:
-
-[Download Docker](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)
+For container management, [Docker](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) is essential. After installing Docker, you should adjust its settings for optimal performance:
+```
+brew install --cask docker
+```
 
 - In Docker's settings, disable **Automatically check configuration** to prevent it from checking your configuration for unexpected changes made by other applications.
 - Adjust the **Resources** settings (CPU and Memory) according to the capabilities of your machine to ensure Docker does not exhaust all system resources.
