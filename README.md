@@ -12,7 +12,8 @@ Here’s a comprehensive guide to get your system ready from scratch.
 To make hidden files visible in Finder:
 ```bash
 defaults write com.apple.finder AppleShowAllFiles true
-
+```
+```bash
 killall Finder
 ```
 
