@@ -212,16 +212,29 @@ brew install --cask tunnelblick
 ---
 ### 10. Install Essential Apps from the App Store
 
-- Password manager
-    - [Bitwarden](https://bitwarden.com/), 1Password or [Enpass](https://www.enpass.io/)
 - Coffee Buzz - keeping your Mac awake
 
 
 ---
 ### 11. Install Other Applications
 
+- Password manager
+    - [Bitwarden](https://bitwarden.com/) `brew install --cask bitwarden`
+    - [1Password](https://1password.com) `brew install --cask 1password`
+    - [Enpass](https://www.enpass.io/) `brew install --cask enpass`
+- Web browser
+    - [Firefox](https://www.mozilla.org/) `brew install --cask firefox`
+    - [Google Chrome](https://www.google.com/chrome/) `brew install --cask google-chrome`
+    - [Microsoft Edge](https://www.microsoft.com/edge/) `brew install --cask microsoft-edge`
+- Team communication
+    - [Slack](https://slack.com/) `brew install --cask slack`
+    - [Discord](https://discord.com/) `brew install --cask discord`
+    - [Microsoft Teams](https://www.microsoft.com/en/microsoft-teams/group-chat-software/) `brew install --cask microsoft-teams`
+    - [WhatsApp](https://www.whatsapp.com/) `brew install --cask whatsapp`
+- Multimedia player
+    - [VLC Media Player](https://www.videolan.org/vlc/) `brew install --cask vlc`
+    - [Spotify](https://www.spotify.com/) `brew install --cask spotify`
 - [Forklift](https://binarynights.com/) - dual pane file manager and file transfer client
-- [VLC Media Player](https://www.videolan.org/vlc/) - open source cross-platform multimedia player
 ```bash
-brew install --cask vlc
+brew install --cask forklift
 ```
