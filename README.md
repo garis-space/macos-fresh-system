@@ -53,6 +53,8 @@ For an enhanced terminal visual experience, manually install the optional fonts 
 You can install Powerlevel10k using Homebrew:
 ```bash
 brew install powerlevel10k
+```
+```bash
 echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 ```
 
@@ -75,6 +77,8 @@ Install the necessary tools via Homebrew:
 [Conda](https://docs.anaconda.com/free/miniconda/index.html) is an open-source package management and environment management system for any language:
 ```bash
 brew install --cask miniconda
+```
+```bash
 conda init "$(basename "${SHELL}")"
 ```
 
@@ -93,15 +97,16 @@ brew install kubectl
 Tools specifically useful for DevOps roles:
 ```bash
 brew tap hashicorp/tap
-brew install hashicorp/tap/terraform
-
-brew install ansible ansible-lint
+```
+```bash
+brew install hashicorp/tap/terraform ansible ansible-lint
 ```
 
 PostgreSQL client library, necessary for Django projects connecting to PostgreSQL databases using psycopg:
 ```bash
 brew install libpq
-
+```
+```bash
 echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.zshrc
 ```
 
@@ -146,7 +151,8 @@ brew install --cask onlyoffice
 
 ```bash
 brew update
-
+```
+```bash
 brew upgrade
 ```
 
