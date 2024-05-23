@@ -100,7 +100,12 @@ Tools specifically useful for DevOps roles:
 brew tap hashicorp/tap
 ```
 ```bash
-brew install hashicorp/tap/terraform ansible ansible-lint
+brew install hashicorp/tap/terraform ansible ansible-lint helm
+```
+
+[Tilt](https://tilt.dev) for dev microservice environment on Kubernetes
+```bash
+brew install tilt
 ```
 
 PostgreSQL client library, necessary for Django projects connecting to PostgreSQL databases using psycopg:
