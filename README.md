@@ -240,7 +240,9 @@ brew install --cask tunnelblick
 - Multimedia player
     - [VLC Media Player](https://www.videolan.org/vlc/) `brew install --cask vlc`
     - [Spotify](https://www.spotify.com/) `brew install --cask spotify`
-- [Forklift](https://binarynights.com/) - dual pane file manager and file transfer client
-```bash
-brew install --cask forklift
-```
+- [Forklift](https://binarynights.com/) - dual pane file manager and file transfer client `brew install --cask forklift`
+- Proton
+    - [Pass](https://proton.me/pass/) - password manager `brew install --cask proton-pass`
+    - [Drive](https://proton.me/drive/) - cloud drive `brew install --cask proton-drive`
+    - [Mail](https://proton.me/mail/) - mail client `brew install --cask proton-mail`
+    - [VPN](https://protonvpn.com/) - No logs, No ads, Unlimited & free forever `brew install --cask protonvpn`
