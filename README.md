@@ -219,6 +219,7 @@ brew install --cask tunnelblick
 ### 10. Install Essential Apps from the App Store
 
 - Coffee Buzz - keeping your Mac awake
+- Xcode - developing apps
 
 
 ---
