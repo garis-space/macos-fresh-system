@@ -126,6 +126,11 @@ File type identification library:
 brew install libmagic
 ```
 
+[Rust](https://www.rust-lang.org) programming language
+```bash
+brew install rust
+```
+
 Tool for converting HTML/CSS documents to PDF:
 ```bash
 brew install weasyprint
@@ -240,8 +245,9 @@ brew install --cask tunnelblick
     - [WhatsApp](https://www.whatsapp.com/) `brew install --cask whatsapp`
 - Multimedia player
     - [VLC Media Player](https://www.videolan.org/vlc/) `brew install --cask vlc`
-    - [Spotify](https://www.spotify.com/) `brew install --cask spotify`
-- [Forklift](https://binarynights.com/) - dual pane file manager and file transfer client `brew install --cask forklift`
+    - [Spotify](https://www.spotify.com/) `brew install --cask spotify` 
+- File manager
+    - [Forklift](https://binarynights.com/) - dual pane file manager and file transfer client `brew install --cask forklift`
 - Proton
     - [Pass](https://proton.me/pass/) - password manager `brew install --cask proton-pass`
     - [Drive](https://proton.me/drive/) - cloud drive `brew install --cask proton-drive`
