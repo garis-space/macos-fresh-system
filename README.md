@@ -146,6 +146,11 @@ brew install --cask postman
 brew install --cask sourcetree
 ```
 
+[Wireshark](https://www.wireshark.org) is network protocol analyzer:
+```bash
+brew install --cask wireshark
+```
+
 Command-line JSON processor:
 ```bash
 brew install jq
