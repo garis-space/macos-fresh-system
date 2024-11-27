@@ -121,9 +121,9 @@ Tool for internationalizing applications:
 brew install gettext
 ```
 
-File type identification library:
+File type identification library and utility to optimize graphic files:
 ```bash
-brew install libmagic
+brew install libmagic jpegoptim optipng
 ```
 
 [Rust](https://www.rust-lang.org) programming language
