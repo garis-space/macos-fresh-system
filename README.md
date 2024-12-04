@@ -100,7 +100,7 @@ Tools specifically useful for DevOps roles:
 brew tap hashicorp/tap
 ```
 ```bash
-brew install hashicorp/tap/terraform ansible ansible-lint helm
+brew install hashicorp/tap/terraform ansible ansible-lint helm argocd
 ```
 
 [Tilt](https://tilt.dev) for dev microservice environment on Kubernetes
