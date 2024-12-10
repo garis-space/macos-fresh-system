@@ -151,6 +151,11 @@ brew install --cask sourcetree
 brew install --cask wireshark
 ```
 
+[Snyk](https://snyk.io) is tool for scans and monitors projects for security vulnerabilities:
+```bash
+brew install snyk-cli
+```
+
 Command-line JSON processor:
 ```bash
 brew install jq
