@@ -85,9 +85,9 @@ conda init "$(basename "${SHELL}")"
 
 #### Developer Tools
 
-CLI tools for managing AWS services and Oracle Cloud
+CLI tools for managing AWS services, Oracle Cloud and Hetzner Cloud
 ```bash
-brew install awscli oci-cli
+brew install awscli oci-cli hcloud
 ```
 
 CLI tool controlling Kubernetes clusters:
