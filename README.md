@@ -263,3 +263,6 @@ brew install --cask tunnelblick
     - [Drive](https://proton.me/drive/) - cloud drive `brew install --cask proton-drive`
     - [Mail](https://proton.me/mail/) - mail client `brew install --cask proton-mail`
     - [VPN](https://protonvpn.com/) - No logs, No ads, Unlimited & free forever `brew install --cask protonvpn`
+- AI Coding Agent
+    - [Claude Code](https://www.anthropic.com/claude-code/) `brew install --cask claude-code`
+    - [OpenAI Codex CLI](https://developers.openai.com/codex/cli/) `brew install codex`
