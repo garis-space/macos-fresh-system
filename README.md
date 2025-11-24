@@ -179,13 +179,13 @@ brew upgrade
 
 
 ---
-### 6. Install Node Version Manager (NVM)
+### 6. Install Node using Node Version Manager (NVM)
 
 To manage multiple versions of Node.js, use NVM.
 
-[Install NVM](https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script)
+[Install Node using nvm](https://nodejs.org/en/download)
 
-Install Node.js latest LTS version:
+Download and Install Node.js latest LTS version:
 ```bash
 nvm install --lts
 ```
