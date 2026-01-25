@@ -266,3 +266,4 @@ brew install --cask tunnelblick
 - AI Coding Agent
     - [Claude Code](https://www.anthropic.com/claude-code/) `brew install --cask claude-code`
     - [OpenAI Codex CLI](https://developers.openai.com/codex/cli/) `brew install codex`
+    - [GitHub Copilot](https://docs.github.com/en/copilot) `brew install copilot-cli`
