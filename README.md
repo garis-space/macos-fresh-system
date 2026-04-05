@@ -252,13 +252,12 @@ brew install --cask claude-code
 
 By creating separate sessions for personal and work use, you can keep your projects organized and maintain a clear distinction between different contexts:
 
-# Create directories for personal and work Claude sessions
+Create directories for personal and work Claude sessions
 ```bash
 mkdir -p ~/.claude-personal ~/.claude-work
 ```
 
-# Add aliases to .zshrc for easy access to personal and work Claude sessions
-
+Add aliases to .zshrc for easy access to personal and work Claude sessions
 ```bash
 echo 'alias claude-personal="CLAUDE_CONFIG_DIR=$HOME/.claude-personal claude"' >> ~/.zshrc
 ```
@@ -267,8 +266,7 @@ echo 'alias claude-personal="CLAUDE_CONFIG_DIR=$HOME/.claude-personal claude"' >
 echo 'alias claude-work="CLAUDE_CONFIG_DIR=$HOME/.claude-work claude"' >> ~/.zshrc
 ```
 
-# Reload .zshrc to apply changes
-
+Reload .zshrc to apply changes
 ```bash
 source ~/.zshrc
 ```
