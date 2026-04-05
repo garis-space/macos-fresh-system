@@ -274,6 +274,11 @@ source ~/.zshrc
 First run of each alias will create separate Claude sessions for personal and work use.
 You can switch between them using the respective aliases in your terminal.
 
+To check logged in status runing claude code (using alias):
+```bash
+claude-personal `!claude auth status`
+```
+
 
 ---
 ### 11. Install Essential Apps from the App Store
