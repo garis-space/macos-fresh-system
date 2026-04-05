@@ -240,16 +240,52 @@ brew install --cask tunnelblick
 
 - [ProtonVPN](https://protonvpn.com/): No logs, No ads, Unlimited & free forever
 
+---
+### 10. Claude Code
+
+Claude Code is an AI-powered code assistant that helps you write, understand, and debug code more efficiently:
+
+- [Claude Code](https://www.anthropic.com/claude-code/)
+```bash
+brew install --cask claude-code
+```
+
+By creating separate sessions for personal and work use, you can keep your projects organized and maintain a clear distinction between different contexts:
+
+# Create directories for personal and work Claude sessions
+```bash
+mkdir -p ~/.claude-personal ~/.claude-work
+```
+
+# Add aliases to .zshrc for easy access to personal and work Claude sessions
+
+```bash
+echo 'alias claude-personal="CLAUDE_CONFIG_DIR=$HOME/.claude-personal claude"' >> ~/.zshrc
+```
+
+```bash
+echo 'alias claude-work="CLAUDE_CONFIG_DIR=$HOME/.claude-work claude"' >> ~/.zshrc
+```
+
+# Reload .zshrc to apply changes
+
+```bash
+source ~/.zshrc
+```
+
+First run of each alias will create separate Claude sessions for personal and work use.
+You can switch between them using the respective aliases in your terminal.
+
 
 ---
-### 10. Install Essential Apps from the App Store
+### 11. Install Essential Apps from the App Store
 
 - Coffee Buzz - keeping your Mac awake
 - Xcode - developing apps
 
 
 ---
-### 11. Install Other Applications
+### 12. Install Other Applications
 
 - Password manager
     - [Bitwarden](https://bitwarden.com/) `brew install --cask bitwarden`
@@ -275,6 +311,5 @@ brew install --cask tunnelblick
     - [Mail](https://proton.me/mail/) - mail client `brew install --cask proton-mail`
     - [VPN](https://protonvpn.com/) - No logs, No ads, Unlimited & free forever `brew install --cask protonvpn`
 - AI Coding Agent
-    - [Claude Code](https://www.anthropic.com/claude-code/) `brew install --cask claude-code`
     - [OpenAI Codex CLI](https://developers.openai.com/codex/cli/) `brew install codex`
     - [GitHub Copilot](https://docs.github.com/en/copilot) `brew install copilot-cli`
