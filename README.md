@@ -81,7 +81,7 @@ brew install uv
 ```
 Add alias to your ~/.zshrc
 ```bash
-alias activate="source .venv/bin/activate"
+echo 'alias activate="source .venv/bin/activate"' >> ~/.zshrc
 ```
 
 #### Install Conda
