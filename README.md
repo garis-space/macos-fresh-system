@@ -73,6 +73,17 @@ This script will guide you through the setup process, allowing you to choose var
 
 Install the necessary tools via Homebrew:
 
+#### Install uv
+
+[uv](https://docs.astral.sh/uv/) is extremely fast Python package and project manager, written in Rust.:
+```bash
+brew install uv
+```
+Add alias to your ~/.zshrc
+```bash
+alias activate="source .venv/bin/activate"
+```
+
 #### Install Conda
 
 [Conda](https://docs.anaconda.com/free/miniconda/index.html) is an open-source package management and environment management system for any language:
