@@ -271,8 +271,14 @@ First run of alias will create separate Claude sessions for work use.
 
 To check logged in status runing claude code (using alias):
 ```bash
-claude-personal `!claude auth status`
+claude-work
 ```
+
+And type:
+```bash
+!claude auth status
+```
+
 
 
 ---
