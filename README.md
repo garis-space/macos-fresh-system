@@ -33,20 +33,25 @@ cat << 'EOF' >> ~/.zshrc
 
 # Homebrew maintenance function
 upd() {
-  echo "🔄 Updating Homebrew..."
+  local GREEN="\033[1;32m"
+  local YELLOW="\033[1;33m"
+  local BLUE="\033[1;34m"
+  local NC="\033[0m"
+
+  echo "${BLUE}=== 🔄 Updating Homebrew ===${NC}"
   brew update || return 1
 
-  echo "⬆️ Upgrading packages..."
+  echo "\n${BLUE}=== ⬆️ Upgrading ===${NC}"
   brew upgrade
 
-  echo "🧹 Cleaning up..."
+  echo "\n${BLUE}=== 🧹 Cleaning ===${NC}"
   brew autoremove
   brew cleanup
 
-  echo "🩺 Running doctor..."
+  echo "\n${BLUE}=== 🩺 Doctor ===${NC}"
   brew doctor
 
-  echo "✅ Done."
+  echo "\n${GREEN}✅ Done.${NC}\n"
 }
 EOF
 ```
