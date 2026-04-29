@@ -27,6 +27,30 @@ Homebrew is a package manager for macOS. It simplifies the installation of softw
 
 Optionally, you can turn off sending anonymous analytics `brew analytics off`
 
+Add maintenance function to keep fast update/upgrade/clean brew packages, use this as `upd` in terminal:
+```bash
+cat << 'EOF' >> ~/.zshrc
+
+# Homebrew maintenance function
+upd() {
+  echo "🔄 Updating Homebrew..."
+  brew update || return 1
+
+  echo "⬆️ Upgrading packages..."
+  brew upgrade
+
+  echo "🧹 Cleaning up..."
+  brew autoremove
+  brew cleanup
+
+  echo "🩺 Running doctor..."
+  brew doctor
+
+  echo "✅ Done."
+}
+EOF
+```
+
 
 ---
 ### 3. Configure Your Terminal
