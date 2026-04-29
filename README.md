@@ -313,7 +313,6 @@ And type:
 ---
 ### 11. Install Essential Apps from the App Store
 
-- Coffee Buzz - keeping your Mac awake
 - Xcode - developing apps
 
 
@@ -346,3 +345,5 @@ And type:
 - AI Coding Agent
     - [OpenAI Codex CLI](https://developers.openai.com/codex/cli/) `brew install codex`
     - [GitHub Copilot](https://docs.github.com/en/copilot) `brew install copilot-cli`
+- Tools
+    - [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake) `brew install keepingyouawake`
