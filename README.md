@@ -336,7 +336,7 @@ And type:
     - [VLC Media Player](https://www.videolan.org/vlc/) `brew install --cask vlc`
     - [Spotify](https://www.spotify.com/) `brew install --cask spotify` 
 - File manager
-    - [Forklift](https://binarynights.com/) - dual pane file manager and file transfer client `brew install --cask forklift`
+    - [Bloom](https://bloomapp.club/) - dual pane file manager and file transfer client `brew install --cask bloom`
 - Proton
     - [Pass](https://proton.me/pass/) - password manager `brew install --cask proton-pass`
     - [Drive](https://proton.me/drive/) - cloud drive `brew install --cask proton-drive`
