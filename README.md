@@ -342,8 +342,11 @@ And type:
     - [Drive](https://proton.me/drive/) - cloud drive `brew install --cask proton-drive`
     - [Mail](https://proton.me/mail/) - mail client `brew install --cask proton-mail`
     - [VPN](https://protonvpn.com/) - No logs, No ads, Unlimited & free forever `brew install --cask protonvpn`
+- AI tools
+    - [ChatGPT](https://chatgpt.com) `brew install chatgpt`
 - AI Coding Agent
-    - [OpenAI Codex CLI](https://developers.openai.com/codex/cli/) `brew install codex`
+    - [OpenAI Codex CLI](https://developers.openai.com/codex/cli) `brew install codex`
+    - [Google Gemini AI CLI](https://github.com/google-gemini/gemini-cli) `brew install gemini-cli`
     - [GitHub Copilot](https://docs.github.com/en/copilot) `brew install copilot-cli`
 - Tools
     - [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake) `brew install keepingyouawake`
