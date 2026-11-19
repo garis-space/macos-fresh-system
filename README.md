@@ -311,13 +311,67 @@ And type:
 
 
 ---
-### 11. Install Essential Apps from the App Store
+### 11. Codex CLI
+
+Codex CLI is OpenAI's coding agent that runs in your terminal:
+
+- [OpenAI Codex CLI](https://developers.openai.com/codex/cli)
+```bash
+brew install --cask codex
+```
+
+Same as with Claude Code, you can create separate sessions for personal and work use. Codex keeps its settings, login and session history in the directory pointed to by `CODEX_HOME` (personal settings are located in ~/.codex dir).
+
+Create directory for work Codex sessions (unlike Claude Code, Codex does not create it on first run and exits with `CODEX_HOME points to ... but that path does not exist`)
+```bash
+mkdir -p ~/.codex-work
+```
+
+Add alias to .zshrc for easy access to work Codex sessions
+```bash
+echo 'alias codex-work="CODEX_HOME=$HOME/.codex-work codex"' >> ~/.zshrc
+```
+
+Reload .zshrc to apply changes
+```bash
+source ~/.zshrc
+```
+
+Log in with your work account (opens the browser):
+```bash
+codex-work login
+```
+
+To check logged in status:
+```bash
+codex-work login status
+```
+
+NOTE: Profiles in `config.toml` (`codex --profile <name>`) only switch settings like model or approval policy, not the login. Every `CODEX_HOME` holds exactly one login, so separate accounts need separate directories.
+
+Optionally, lock the work sessions to your company ChatGPT workspace, so they can't be logged in with a personal account by mistake. After the first login, read the workspace id:
+```bash
+jq -r '.tokens.account_id' ~/.codex-work/auth.json
+```
+
+And add it to `~/.codex-work/config.toml`:
+```toml
+forced_login_method = "chatgpt"
+forced_chatgpt_workspace_id = "<workspace-id>"
+```
+
+NOTE: The `claude-work` and `codex-work` aliases work only in the terminal. IDE extensions and desktop apps always use the default (personal) directories ~/.claude and ~/.codex.
+
+
+
+---
+### 12. Install Essential Apps from the App Store
 
 - Xcode - developing apps
 
 
 ---
-### 12. Install Other Applications
+### 13. Install Other Applications
 
 - Password manager
     - [Bitwarden](https://bitwarden.com/) `brew install --cask bitwarden`
@@ -347,7 +401,7 @@ And type:
     - [ChatGPT](https://chatgpt.com) `brew install chatgpt`
 - AI Coding Agent
     - [Claude Code CLI](https://www.anthropic.com/claude-code) `brew install claude-code` (NOTE: installed in point #10)
-    - [OpenAI Codex CLI](https://developers.openai.com/codex/cli) `brew install codex`
+    - [OpenAI Codex CLI](https://developers.openai.com/codex/cli) `brew install --cask codex` (NOTE: installed in point #11)
     - [Google Gemini AI CLI](https://github.com/google-gemini/gemini-cli) `brew install gemini-cli`
     - [GitHub Copilot](https://docs.github.com/en/copilot) `brew install copilot-cli`
 - Tools
