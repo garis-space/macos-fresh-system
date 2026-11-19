@@ -286,9 +286,9 @@ Create directories for work Claude sessions (personal settings are located in ~/
 mkdir -p ~/.claude-work
 ```
 
-Add aliases to .zshrc for easy access to work Claude sessions
+Add alias to .zshrc for easy access to work Claude sessions (the `grep` guard keeps the alias from being added twice when you rerun this step)
 ```bash
-echo 'alias claude-work="CLAUDE_CONFIG_DIR=$HOME/.claude-work claude"' >> ~/.zshrc
+grep -q 'alias claude-work=' ~/.zshrc || echo 'alias claude-work="CLAUDE_CONFIG_DIR=$HOME/.claude-work claude"' >> ~/.zshrc
 ```
 
 Reload .zshrc to apply changes
@@ -298,15 +298,19 @@ source ~/.zshrc
 
 First run of alias will create separate Claude sessions for work use.
 
-To check logged in status runing claude code (using alias):
+To check which account each session uses, look at `email` and `orgName` (`loggedIn` alone does not tell the accounts apart):
 ```bash
-claude-work
+claude-work auth status
+```
+```bash
+claude auth status
 ```
 
-And type:
-```bash
-!claude auth status
-```
+NOTE: Commands started from inside a `claude-work` session (e.g. `!claude auth status`) inherit `CLAUDE_CONFIG_DIR`, so they report the work account too.
+
+NOTE: Claude Code keeps the login in the macOS Keychain under a name derived from the `CLAUDE_CONFIG_DIR` value. Set it to the same absolute path everywhere (`/Users/<you>/.claude-work`), otherwise you end up with a separate login. Places that do not expand `~` or `$HOME` need the full path written out.
+
+NOTE: Your home directory is a parent of every project, so `claude-work` sessions also load `~/.claude/rules/` as project rules. Anything you put there reaches the work account as well.
 
 
 
@@ -327,9 +331,9 @@ Create directory for work Codex sessions (unlike Claude Code, Codex does not cre
 mkdir -p ~/.codex-work
 ```
 
-Add alias to .zshrc for easy access to work Codex sessions
+Add alias to .zshrc for easy access to work Codex sessions (the `grep` guard keeps the alias from being added twice when you rerun this step)
 ```bash
-echo 'alias codex-work="CODEX_HOME=$HOME/.codex-work codex"' >> ~/.zshrc
+grep -q 'alias codex-work=' ~/.zshrc || echo 'alias codex-work="CODEX_HOME=$HOME/.codex-work codex"' >> ~/.zshrc
 ```
 
 Reload .zshrc to apply changes
@@ -337,19 +341,20 @@ Reload .zshrc to apply changes
 source ~/.zshrc
 ```
 
-Log in with your work account (opens the browser):
+Log in with your work account (opens the browser; if the browser is signed in to your personal ChatGPT, sign out there first or the login lands on the personal account):
 ```bash
 codex-work login
 ```
 
-To check logged in status:
+`codex-work login status` prints only `Logged in using ChatGPT`, the same for every account. To see which account and plan a directory is logged in with, decode the id token:
 ```bash
-codex-work login status
+jq -c '.tokens.id_token | split(".")[1] | gsub("-";"+") | gsub("_";"/") | @base64d | fromjson | {email, plan: .["https://api.openai.com/auth"].chatgpt_plan_type}' ~/.codex-work/auth.json
 ```
+Swap the path for `~/.codex/auth.json` to check the personal one.
 
 NOTE: Profiles in `config.toml` (`codex --profile <name>`) only switch settings like model or approval policy, not the login. Every `CODEX_HOME` holds exactly one login, so separate accounts need separate directories.
 
-Optionally, lock the work sessions to your company ChatGPT workspace, so they can't be logged in with a personal account by mistake. After the first login, read the workspace id:
+Lock the work sessions to your company ChatGPT workspace, so they can't be logged in with a personal account by mistake. First confirm with the command above that the login shows your work email and plan; locking a wrong first login pins the personal account instead. Then read the workspace id:
 ```bash
 jq -r '.tokens.account_id' ~/.codex-work/auth.json
 ```
@@ -400,7 +405,7 @@ NOTE: The `claude-work` and `codex-work` aliases work only in the terminal. IDE 
     - [Claude](https://claude.com) `brew install claude`
     - [ChatGPT](https://chatgpt.com) `brew install chatgpt`
 - AI Coding Agent
-    - [Claude Code CLI](https://www.anthropic.com/claude-code) `brew install claude-code` (NOTE: installed in point #10)
+    - [Claude Code CLI](https://www.anthropic.com/claude-code) `brew install --cask claude-code` (NOTE: installed in point #10)
     - [OpenAI Codex CLI](https://developers.openai.com/codex/cli) `brew install --cask codex` (NOTE: installed in point #11)
     - [Google Gemini AI CLI](https://github.com/google-gemini/gemini-cli) `brew install gemini-cli`
     - [GitHub Copilot](https://docs.github.com/en/copilot) `brew install copilot-cli`
